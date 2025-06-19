@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        input[type=submit] {
+            width: 50%;
+            background-color: rgb(0, 98, 255);
+            padding: 12px 16px;
+            color: white;
+            margin: 6px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        table {
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(50px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 60%;
+        }
+
+        th {
+            color: white;
+            text-align: left;
+        }
+
+        td {
+            color: black;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(83, 186, 255);
+            text-align: center;
+        }
+
+        p {
+            color: #C9C9C9;
+        }
+
+        body {
+            background-image: url("https://wallpapers.com/images/hd/professional-background-gpyiwar9suq43xgr.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .para {
+            text-align: left;
+        }
+
+        .success-message {
+            display: none;
+            color: green;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+       
+        $registrationSuccess = true;
+         
+    }
+    ?>
+
+    <form method="POST" action="">
+        <table>
+            <tr>
+                <th colspan="2"><h1>REGISTER NOW</h1></th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="cname">Company Name</label><br>
+                    <input type="text" id="cname" name="cname" placeholder="Enter company name" required>
+                </th>
+                <th>
+                    <label for="dob">Incorporation Date</label><br>
+                    <input type="date" id="dob" name="dob" required>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required>
+                </th>
+                <th>
+                    <label for="pno">Phone Number</label><br>
+                    <input type="tel" id="pno" name="pno" placeholder="Enter phone number" required>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="country">Headquarters</label><br>
+                    <input type="text" id="country" name="country" placeholder="Enter headquarters" required>
+                </th>
+                <th>
+                    <label>Type</label><br>
+                    <label><input type="radio" name="type" value="public" required> Public</label>
+                    <label><input type="radio" name="type" value="private"> Private</label>
+                    <label><input type="radio" name="type" value="govt"> Government</label>
+                    <label><input type="radio" name="type" value="other"> Other</label>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </th>
+                <th>
+                    <label for="confirm_password">Confirm Password</label><br>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <label for="description">Company Description</label><br>
+                    <textarea id="description" name="description" placeholder="Enter company description" rows="3" style="width: 80%;"></textarea>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Register">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <?php if (isset($registrationSuccess) && $registrationSuccess): ?>
+        <div id="successMessage" class="success-message">Registration Successful!</div>
+    <?php endif; ?>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const successMessage = document.getElementById("successMessage");
+            if (successMessage) {
+                successMessage.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

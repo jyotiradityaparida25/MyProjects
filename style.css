@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #000000;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+header p {
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.cta-buttons .button {
+    display: inline-block;
+    background: #f78f3f;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0.5rem;
+}
+
+.mission, .services, .how-it-works, .testimonials {
+    padding: 2rem 0;
+    background: #f4f4f4;
+}
+
+.services .service-list {
+    display: flex;
+    justify-content: space-around;
+    fl
+}
+.skillbidder {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    background: linear-gradient(to right, #00eaff, #ff6ac1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 10px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    /* padding-left:5px;
+    float: right; */
+    letter-spacing: 2px;
+    margin: 0;
+    float: left;
+}
+/* nav{
+    background-color: black;
+}
+#nav{
+    background-color: black;
+} */
